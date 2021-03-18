@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    
+
+<style>
+    nav{
+    background:white ;
+  }
+
+  ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #673AA3;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #FFC107;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #FFC107;
+  line-height:55px;
+  text-align:center;
+  font-size: 30px;
+}
+
+.progress{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+.progress:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 12px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress > span{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.progress .progress-left{
+    left: 0;
+}
+.progress .progress-bar{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 12px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+.progress .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.progress .progress-right{
+    right: 0;
+}
+.progress .progress-right .progress-bar{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: #44484b;
+    font-size: 24px;
+    color: #fff;
+    line-height: 135px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.progress.blue .progress-bar{
+    border-color: #049dff;
+}
+.progress.blue .progress-left .progress-bar{
+    animation: loading-2 1.5s linear forwards 1.8s;
+}
+.progress.yellow .progress-bar{
+    border-color: #fdba04;
+}
+.progress.yellow .progress-left .progress-bar{
+    animation: loading-3 1s linear forwards 1.8s;
+}
+.progress.pink .progress-bar{
+    border-color: #ed687c;
+}
+.progress.pink .progress-left .progress-bar{
+    animation: loading-4 0.4s linear forwards 1.8s;
+}
+.progress.green .progress-bar{
+    border-color: #1abc9c;
+}
+.progress.green .progress-left .progress-bar{
+    animation: loading-5 1.2s linear forwards 1.8s;
+}
+@keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+@keyframes loading-3{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+@keyframes loading-4{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+}
+@keyframes loading-5{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(126deg);
+        transform: rotate(126deg);
+    }
+}
+@media only screen and (max-width: 990px){
+    .progress{ margin-bottom: 20px; }
+}
+
+
+/*this is footer.css*/
+/*footer
+.col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#CCC;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid  #673AA3; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+  list-style-type:none;
+  padding:0px;
+  display:table;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+}
+*/
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:black; margin:0 12px;}
+
+.social_footer_ul { display:table; list-style-type:none;  }
+.social_footer_ul li {float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid  #673AA3; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+
+</style>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+  <a class="navbar-brand " href="#" style="color: #673AA3">Zarlish Hina</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav m-auto mt-5 mt-lg-0">
+      <li class="nav-item active ml-3">
+        <a class="nav-link" href="#" style="color: #0B2435">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link"  style="color: #0B2435" href="#section1">ABOUT ME</a>
+      </li>
+      <li class="nav-item ml-3">
+        <a class="nav-link"  style="color: #0B2435" href="#section2">SKILLS</a>
+      </li>
+      <li class="nav-item ml-3"> 
+        <a class="nav-link"  style="color: #0B2435" href="#section3">Services</a>
+      </li><li class="nav-item ml-3">
+        <a class="nav-link"  style="color: #0B2435" href="#section4">Work</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a href="#section5" class="btn btn-outline-warning " role="button" aria-pressed="true">Contact Me</a>
+    </form>
+  </div>
+</nav>
+<hr>
+<div class="container-fluid bg-white">
+ 
+    <div class="row">
+        <div class="box col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <br><br><br><br>
+       <h3 style="color: #4A4A4A;font-weight: bolder;font-size: 40px;" class="text-center">I'm a</h3>
+        <h1 style="font-weight: bolder;color: #343A40;font-size: 35px;" class="text-center">PROFESSIONAL WEB</h1>
+        <h1 style="font-weight: bolder;color: #343A40;font-size: 35px" class="text-center">DEVELOPER<i class="fa fa-square ml-2 text-warning" style="font-size:28px;"></i></h1>
+        <center>
+       <button type="button" class="btn btn mt-5" style="background-color:#673AA3;color: white">Hire Me</button>
+    
+       <button type="button" class="btn btn-outline-warning mt-5">Contact Me</button>
+     
+     </center>
+</div>
+<div class="box col-xl-6 col-lg-6 col-md-6 col-sm-6">
+  <center>
+ <img src="s-1.jpg" class="w-75 h-50">
+</center>
+</div>
+        <br><br>
+      
+<br><br><br><br><br>
+        </div>
+       
+    </div></div>
+
+    <div id="section1" class="container">
+
+
+  <div class="row">
+    <div class="col-xl-6 mx-auto text-center mt-5">
+      <br>
+      <h1 style="font-weight: bolder; font-size: 50px;color: #673AA3">About Me</h1>
+      <h6 class="text-secondary" style="font-family: sans-serif;">Main Informations About Me And What I Love To Do.</h6>
+</div>
+</div>
+<div class="row shadow">
+  <div class="col-lg-4 col-sm-6 m-auto mt-5">
+      
+    <img src="aa.png" class="w-100 h-100">
+    
+  </div>
+  
+       
+          <div class="col-lg-6 col-sm-6 m-auto bg-white mt-5">
+<h5 class="text-dark mt-2">My name is <mark style="background-color: transparent;color: #673AA3">Zarlish Hina</mark></h5>
+                  <p class="mt-3 text-dark" style="word-spacing: 3px;">I am a Software Engineer and also an expert in Web Designing and 3 years of Software Development experience with both medium and large website projects. I also worked in Graphics Designing. I will make any kind of logo design, business card design, flyer design, stationery design for you. I am passionate dedicated to my work. I have acqurid the skills and knowledge necessary to make your project success.</p>
+                  <br>
+                  <button type="button" class="btn btn-warning btn-sm text-white"><i class="fa fa-download mr-2" aria-hidden="true" style="color: white"></i>Download CV</button>
+                  <i class="bi bi-download"></i>
+                  <br>
+                </div></div>
+                <br>
+ <center>
+  <h2 style="font-weight: bolder;color: #673AA3" class="mt-4">I AM Available For Freelancer!</h2>
+</center>
+<div class="row mt-4">
+  <div class="col-lg-2 col-md-6 col-sm-6 bg-light m-3 shadow" style="background-color: #F8F9FA;border-radius: 10px;">
+    <br>
+    <center>
+   <i class="fa fa-user text-dark" aria-hidden="true" style="font-size: 30px;"></i>
+    <h6 class="mt-1">Project</h6>
+    <h6>Complete</h6>
+  </center>
+  <br>
+  </div>
+ 
+   <div class="col-lg-2 col-md-6 col-sm-6 bg-light m-3 shadow" style="background-color: #F8F9FA;border-radius: 10px;">
+    <br>
+    <center>
+
+      <i class="fa fa-smile-o text-dark" aria-hidden="true" style="font-size: 30px;"></i>
+    <h6 class="mt-1"> Satisfied</h6>
+    <h6>Clients</h6>
+  </center>
+  <br>
+  </div>
+
+  <div class="col-lg-2 col-md-6 col-sm-6 bg-light m-3 shadow" style="background-color: #F8F9FA;border-radius: 10px;">
+    <br>
+    <center>
+      <i class="fas fa-atom text-dark" aria-hidden="true" style="font-size: 30px;"></i>
+   
+    <h6 class="mt-1"> Web design</h6>
+    <h6>experience</h6>
+  </center>
+  <br>
+  </div>
+
+  <div class="col-lg-2 col-md-6 col-sm-6 bg-light m-3 shadow" style="background-color: #F8F9FA;border-radius: 10px;">
+    <br>
+    <center>
+    <i class='fas fa-award text-dark' style='font-size:30px;color:red'></i>
+    <h6 class="mt-1"> Quality work</h6>
+    <h6>provided</h6>
+  </center>
+  <br>
+  </div>
+
+  <div class="col-lg-2 col-md-6 col-sm-6 bg-light m-3 shadow" style="background-color: #F8F9FA;border-radius: 10px;">
+    <br>
+    <center>
+    <i class='fas fa-laptop-code text-dark' style='font-size:30px;color:red'></i>
+    <h6 class="mt-1"> Command on</h6>
+    <h6>coding</h6>
+  </center>
+  <br>
+  </div>
+
+  </div>
+              </div>
+<!--education-->
+<div class="container">
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 mt-5 shadow">
+      <br>
+      <h4>My Education</h4>
+      <ul class="timeline">
+        <li>
+          <a target="_blank" href="https://www.totoprayogo.com/#" class="text-dark">10th Degree - Govt Girls High School</a>
+         <h6 class="text-dark">2014</h6>
+          <h6 class="text-secondary">I am a 10th passed student of govt girls high school from BISE board</h6>
+        </li>
+        <br>
+        <li>
+          <a href="#" class="text-dark">12th Degree - The Learners Collage</a>
+            <h6 class="text-dark">2016</h6>
+          <h6 class="text-secondary">I am a 12th passed student of The Learners Collage from Punjab board.</h6>
+        </li>
+        <br>
+        <li>
+          <a href="#" class="text-dark">Bachlor Degree - Superior University</a>
+            <h6 class="text-dark">2020</h6>
+          <h6 class="text-secondary">I am a graduate student in BSCS (Computer Science), Superior University.</h6>
+        </li>
+      </ul>
+    </div>
+
+     <div class="col-lg-6 col-md-6 col-sm-6 mt-5 shadow">
+      <br>
+      <h4>My Expericence</h4>
+      <ul class="timeline">
+        <li>
+          <a target="_blank" href="https://www.totoprayogo.com/#" class="text-dark">Web Designing</a>
+           <h6 class="text-dark">2017</h6>
+          <h6 class="text-secondary">I have well experience in Website Designing & Development.</h6>
+        </li>
+        <br>
+        <li>
+          <a href="#" class="text-dark">Graphics Designing</a>
+               <h6 class="text-dark">2020</h6>   
+          <h6 class="text-secondary">I have a lot of experience in Graphics Designing.</h6>
+        </li>
+        <br>
+        <li>
+          <a href="#" class="text-dark">WordPress</a>
+            <h6 class="text-dark">2021</h6>
+          <h6 class="text-secondary">I have a lot of experience in WordPress Wensite.</h6>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+  </div>
+
+</div>
+  <!--skills-->          
+<div id="section2" class="container">
+
+ <div class="row">
+    <div class="col-xl-6 mx-auto text-center mt-5">
+      <br>
+      <h1 style="font-weight: bolder; font-size: 50px;color: #673AA3">My Skills</h1>
+      <h6 class="text-secondary" style="font-family: sans-serif;">A have a lot of skills.</h6>
+</div>
+ </div>
+ <div class="row">
+<div class="col-lg-3 col-md-6 col-sm-6 mt-5 shadow" style="background-color: #F8F9FA">
+    <br>
+    <h5 class="text-center">Web Designing</h5>
+    <br>
+            <div class="progress yellow">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value bg-secondary">90%</div>
+            </div>
+            <br> 
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-6 mt-5 shadow" style="background-color: #F8F9FA">
+    <br>
+    <h5 class="text-center">Web Development</h5>
+    <br>
+            <div class="progress blue">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value bg-secondary">85%</div>
+            </div>
+            <br> 
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-6 mt-5 shadow" style="background-color: #F8F9FA">
+    <br>
+    <h5 class="text-center">WordPress</h5>
+    <br>
+            <div class="progress yellow">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value bg-secondary">90%</div>
+            </div>
+            <br> 
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-6 mt-5 shadow" style="background-color: #F8F9FA">
+    <br>
+    <h5 class="text-center">Graphics Designing</h5>
+    <br>
+            <div class="progress green">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value bg-secondary">80%</div>
+            </div>
+            <br> 
+</div>
+
+                    
+ </div>
+</div>
+<!--services-->
+
+<div id="section3" class="container mt-5">
+
+ <div class="row">
+    <div class="col-xl-6 mx-auto text-center mt-5">
+      <br>
+      <h1 style="font-weight: bolder; font-size: 50px;color: #673AA3">Services</h1>
+      <h6 class="text-secondary" style="font-family: sans-serif;">I Have Worked With A Number Of Clients.</h6>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6 col-sm-6 mt-5 bg-white shadow">
+  <br>
+  <center>
+ <div class="circle text-warning">01</div>
+ <h5 class="mt-2" style="color: #673AA3">Web Designing</h5>
+ <h6 class="text-dark">HTML5, CSS3 ,BOOSTRAP, JQuery, JavaScript and other modren technologies.</h6>
+</center>
+<br><br>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6 mt-5 bg-white shadow">
+  <br>
+  <center>
+ <div class="circle text-warning">02</div>
+ <h5 class="mt-2" style="color: #673AA3">Web Development</h5>
+ <h6 class="text-dark">PHP, Laravel,MY SQL, JavaScript/ jQuery and other modern technologies.</h6>
+</center>
+<br><br>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-6 mt-5 bg-white shadow">
+  <br>
+  <center>
+ <div class="circle text-warning">03</div>
+ <h5 class="mt-2" style="color: #673AA3">Responsive Design</h5>
+ <h6 class="text-dark">All websites must be optimized for mobile using Boostrap and Media Queries.</h6>
+</center>
+<br><br>
+  </div>
+<!--2-->
+ <div class="col-lg-4 col-md-6 col-sm-6 mt-5 bg-white shadow">
+  <br>
+  <center>
+ <div class="circle text-warning">04</div>
+ <h5 class="mt-2" style="color: #673AA3">Graphics Design</h5>
+ <h6 class="text-dark">I can create InfoGraphics, Brochure, Poster,Catalog, Social Media Post, UI/UX design,logos etc.</h6>
+</center>
+<br><br>
+  </div>
+   <div class="col-lg-4 col-md-6 col-sm-6 mt-5 bg-white shadow">
+  <br>
+  <center>
+ <div class="circle text-warning">05</div>
+ <h5 class="mt-2" style="color: #673AA3">Wordpress</h5>
+ <h6 class="text-dark">Create WordPress design or WordPress Bulding Website, Custom Content Type, Theme Development</h6>
+</center>
+<br><br>
+  </div>
+   <div class="col-lg-4 col-md-6 col-sm-6 mt-5 bg-white shadow">
+  <br>
+  <center>
+ <div class="circle text-warning">06</div>
+ <h5 class="mt-2" style="color: #673AA3">E-commerce</h5>
+ <h6 class="text-dark">Design E-commerce Website online store with Wordpress using WooCommerce or Redesign commerce Website.</h6>
+</center>
+<br><br>
+  </div>
+
+
+  </div>
+</div>
+<!--my work-->
+<div id="section4" class="container">
+
+ <div class="row">
+    <div class="col-xl-6 mx-auto text-center mt-5">
+      <br>
+      <h1 style="font-weight: bolder; font-size: 50px;color: #673AA3">My Work</h1>
+      <h6 class="text-secondary" style="font-family: sans-serif;">A Latest Creative Works In Design And Web .</h6>
+</div>
+</div>
+       <div class="row">
+           <div class="box col-lg-4 col-sm-6 mt-5">
+                <img src="p13.jpg" class="w-100 shadow">
+                   <h6 class="text-center text-warning mt-2"> HTML, CSS</h6>
+            </div>
+ 
+<!--2-->
+  <div class="box col-lg-4 col-sm-6 mt-5">
+                <img src="p15.webp" class="w-100 shadow">
+                   <h6 class="text-center text-warning mt-2"> PHP, MY SQL</h6>
+            </div>
+
+                          <!--3-->
+                            <div class="box col-lg-4 col-sm-6 mt-5">
+                <img src="p14.jpg" class="w-100 shadow">
+                   <h6 class="text-center text-warning mt-2"> WORDPRESS</h6>
+            </div>
+
+                          <!--4-->
+
+                            <div class="box col-lg-4 col-sm-6 mt-5">
+                <img src="p18.jpg" class="w-100 shadow">
+                   <h6 class="text-center text-warning mt-2">RESPONSIVE</h6>
+            </div>
+                             
+<!--2-->
+  <div class="box col-lg-4 col-sm-6 mt-5">
+                <img src="p20.jpg" class="w-100 shadow">
+                   <h6 class="text-center text-warning mt-2"> GRAPHICS DESIGNING</h6>
+            </div>
+                          <!--2-->
+                            <div class="box col-lg-4 col-sm-6 mt-5">
+                <img src="p5.png" class="w-100 shadow">
+                   <h6 class="text-center text-warning mt-2"> E-COMMERCE</h6>
+            </div>
+  </div></div>
+</div>
+<!--contact-->
+
+<div id="section5" class="container">
+
+ <div class="row">
+    <div class="col-xl-6 mx-auto text-center mt-5">
+      <br>
+      <h1 style="font-weight: bolder; font-size: 50px;color: #673AA3">Contact Me</h1>
+      <h6 class="text-secondary" style="font-family: sans-serif;">Feel Free To Contact Me Any Time</h6>
+</div>
+</div>
+  <div class="row mt-5 shadow">
+
+   <div class="col-lg-6 col-md-6 col-sm-6 m-1" style="background-color: white">
+                   <br>
+        <form style="background-color: #F8F9FA">
+  <div class="form-group">
+    <label for="formGroupExampleInput" style="color: #0A2538">Name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2" style="color: #0A2538">Email</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+  </div>
+    <div class="form-group">
+    <label for="formGroupExampleInput2" style="color: #0A2538">Subject</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+  </div>
+  <div class="form-group">
+     <label for="exampleFormControlTextarea1" style="color: #0A2538">Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <br>
+ <button style="font-size:15px" class="btn btn-secondary mr-5" style="color: #6539A0">Message Send</i></button>
+ <br><br>
+
+</form>
+                          </div>
+<div class="box col-lg-5 col-sm-5">
+  <br>
+  <h4 style="color:#FFC107 ">Let's talk about everything!</h4>
+  <p class="text-dark" style="word-break: 3px">  If you like my work, feel free to contact me. Here below are my email & fiverr link. Let's talk about what you want,
+I am ready to create it for you. Thankyou.
+  </p><br>
+
+  <i class="fa fa-envelope" style="font-size:25px;color:#FFC107"><h5 class="text-dark"> hzarlish4@gmail.com</h5></i>
+<br>
+    <i class="fa fa-link" style="font-size:25px;color:#FFC107"></i><a href="www.fiverr.com/zarlishhina09?up_rollout=true" style="color: black"><h5 class="text-dark" style="text-underline-position: none">www.fiverr.com/zarlishhina09?up_rollout=true</h5></a>
+
+</div>
+
+                </div>      
+</div>
+<div class="container-fluid bg-warning">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 m-auto">
+
+  <br>
+<ul class="social_footer_ul m-auto">
+<li class="m-1"><a href=""><i class="fab fa-facebook-f" style="color: #673AA3"></i></a></li>
+<li class="m-1"><a href=""><i class="fab fa-twitter"  style="color: #673AA3"></i></a></li>
+<li class="m-1"><a href=""><i class="fab fa-linkedin"  style="color: #673AA3"></i></a></li>
+<li class="m-1"><a href=""><i class="fab fa-instagram"  style="color: #673AA3"></i></a></li>
+</ul>
+<br>
+<p class="text-center text-secondary"> © 2021 Zarlish Hina all rights reserved.</p>
+
+</div></div></div>
+
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
